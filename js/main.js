@@ -40,15 +40,22 @@
             this.content = content;
         }
     }
-    console.log("Este es mi primer commit");
-    const container = document.querySelector(".example");
+    const add = document.querySelector("#addtab");
     const initialTab = new Tab(100,"New tab","Content of tab","http://via.placeholder.com/15x15");
     const newTab = initialTab.show();
-    document.addEventListener("click", function(){
-        document.getElementById("demo").innerHTML = "Hello World";
-    });
-    alert(newTab);
-    console.log(newTab);
+    const containerTabs = document.querySelector(".tabs");
+    const containerContent = document.querySelector(".conttab");
 
+    add.addEventListener("click", function(){
+        let divTab = document.createElement("div");
+        divTab.classList.toggle("customtab");
+        divTab.innerHTML = initialTab.getName();
+        let tabContent = document.createElement("div");
+        tabContent.classList.toggle("content");
+        tabContent.innerHTML = initialTab.getContent();
+        containerTabs.appendChild(divTab);
+        containerContent.appendChild(tabContent);
+    });
+    console.log(newTab);
 
 })(window,document);
