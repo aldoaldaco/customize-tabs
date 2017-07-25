@@ -3,17 +3,10 @@
 // set initial data
 (function main(){
     class Tab {
-        constructor(width,name,content,icon) {
+        constructor(width,name,content) {
             this.width = width;
             this.name = name;
             this.content = content;
-            this.icon = icon;
-        }
-        /*create(width,name,content){
-            return new Tab(width,name,content);
-        }*/
-        show(){
-            return `<div class="tab"><img src="${this.icon}" width="20px" height="20px"/>${this.name}</div><div class="content-tab">${this.content}<div>`;
         }
         getWidth(){
             return this.width;
@@ -27,12 +20,6 @@
         setName(name){
             this.name = name;
         }
-        getIcon(){
-            return this.Icon;
-        }
-        setIcon(icon){
-            this.icon = icon;
-        }
         getContent(){
             return this.content;
         }
@@ -41,8 +28,7 @@
         }
     }
     const add = document.querySelector("#addtab");
-    const initialTab = new Tab(100,"New tab","Content of tab","http://via.placeholder.com/15x15");
-    const newTab = initialTab.show();
+    const initialTab = new Tab(100,"New tab","Content of tab");
     const containerTabs = document.querySelector(".tabs");
     const containerContent = document.querySelector(".conttab");
 
@@ -56,6 +42,4 @@
         containerTabs.appendChild(divTab);
         containerContent.appendChild(tabContent);
     });
-    console.log(newTab);
-
 })(window,document);
