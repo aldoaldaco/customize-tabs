@@ -3,16 +3,9 @@
 // set initial data
 (function main(){
     class Tab {
-        constructor(width,name,content) {
-            this.width = width;
+        constructor(name,content) {
             this.name = name;
             this.content = content;
-        }
-        getWidth(){
-            return this.width;
-        }
-        setWidth(width){
-            this.width = width;
         }
         getName(){
             return this.name;
@@ -28,7 +21,7 @@
         }
     }
     const add = document.querySelector("#addtab");
-    const initialTab = new Tab(100,"New tab","Content of tab");
+    const initialTab = new Tab("New tab","Content of tab");
     const containerTabs = document.querySelector(".tabs");
     const containerContent = document.querySelector(".conttab");
 
