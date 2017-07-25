@@ -66,6 +66,7 @@ table {
 }
 
 .customtab {
+	order:0;
 	line-height: 30px;
 	background-color: #EAECFF;
 	border-top: solid #969EFF;
@@ -80,6 +81,7 @@ table {
 }
 
 .addtab {
+	order:1;
 	line-height: 20px;
 	background-color: #EAECFF;
 	border-top: solid #969EFF;
